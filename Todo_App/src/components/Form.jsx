@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 
 function Form({ addTodo }) {
-  const [title, setTitle] = useState('');
-  const [isUrgent, setIsUrgent] = useState(false);
+  const [title, setTitle] = useReducer('');
+  const [isUrgent, setIsUrgent] = useReducer(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();

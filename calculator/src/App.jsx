@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
 import ResultDisplay from "./components/ResultDisplay";
 
 const App = () => {
-  const [input, setInput] = useState("");
-  const [result, setResult] = useState("");
+  const [input, setInput] = useReducer("");
+  const [result, setResult] = useReducer("");
 
   const handleButtonClick = (value) => {
     if (value === "=") {

@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import Form from './components/Form';
 import TodoData from './components/TodoData';
 import AllTodos from './components/AllTodos';
 import "../assets/style.css";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useReducer([]);
 
   const addTodo = (todo) => {
     setTodos([...todos, { ...todo, id: Date.now() }]);
